@@ -6,9 +6,9 @@ include "functions.php";
 Create new function whenever there is a new table
 */
 
-function user() {
+function contact() {
 	$crud = new CRUD;
-	$crud->table = "user";
+	$crud->table = "contact";
 	return $crud;
 }
 

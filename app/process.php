@@ -7,16 +7,30 @@ $action = $_GET['action'];
 
 switch ($action) {
 
-	case 'record-add' :
-		record_add();
+	case 'add-user' :
+		add_user();
 		break;
+
+  case 'delete-user' :
+    delete_user();
+    break;
+
+  case 'edit-user' :
+  edit_user();
+  break;
 
 	default :
 }
 
-function delete_records(){
-	$userId = $_GET["userId"];
-	record()->delete("userId=$userId");
 
-	header('Location: delete-reset.php?success=You have successfully deleted all records');
+function add_user()
+{
+
+    $model = contact();
+    $model->obj["name"] = $_POST["name"];
+    $model->obj["number"] = $_POST["number"];
+    $model->obj["age"] = $_POST["age"];
+    $model->create();
+
+	header('Location: index.php');
 }

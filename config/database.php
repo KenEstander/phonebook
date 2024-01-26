@@ -1,7 +1,7 @@
 <?php
 class Database
 {
-    private static $dbName = 'phpbasemodel.db' ;
+    private static $dbName = 'phonebook.db' ;
     private static $dbHost = 'localhost' ;
     private static $dbUsername = 'root';
     private static $dbUserPassword = '';

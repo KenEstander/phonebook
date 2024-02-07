@@ -11,5 +11,24 @@ function contact() {
 	$crud->table = "contact";
 	return $crud;
 }
-
+function friend() {
+	$crud = new CRUD;
+	$crud->table = "friend";
+	return $crud;
+}
+function menu() {
+	$crud = new CRUD;
+	$crud->table = "menu";
+	return $crud;
+}
+function recipe() {
+	$crud = new CRUD;
+	$crud->table = "recipe";
+	return $crud;
+}
+function comment() {
+	$crud = new CRUD;
+	$crud->table = "comment";
+	return $crud;
+}
 ?>
